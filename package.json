@@ -1,0 +1,67 @@
+{
+    "name": "rmacro",
+    "displayName": "Roll20 Macros",
+    "description": "Syntax support for Roll20 macros",
+    "version": "1.0.2",
+    "publisher": "anduh",
+    "icon": "images/Roll20.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/anduh/rmacro"
+    },
+    "bugs": {
+        "url": "https://github.com/anduh/rmacro/issues"
+    },
+    "license": "MIT",
+    "preview": true,
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Language Packs",
+        "Visualization",
+        "Other"
+    ],
+    "keywords": [
+        "Roll20",
+        "TTRPG",
+        "roll",
+        "dice",
+        "syntax highlight"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "rmacro",
+                "aliases": [
+                    "Roll20 macro",
+                    "rmacro"
+                ],
+                "extensions": [
+                    ".roll",
+                    ".rmacro",
+                    ".roll20",
+                    ".r20macro"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "rmacro",
+                "scopeName": "source.rmacro",
+                "path": "./syntaxes/rmacro.tmLanguage.json"
+            }
+        ],
+        "configurationDefaults": {
+            "[rmacro]": {
+                "editor.bracketPairColorization.enabled": true
+            }
+        }
+    },
+    "devDependencies": {
+        "webpack": "^5.64.2",
+        "webpack-cli": "^4.9.1"
+    }
+}
