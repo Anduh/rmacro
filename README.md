@@ -1,5 +1,8 @@
 # Roll20 Macros - `rmacro`
-![!version](https://img.shields.io/badge/Version-1.0.2-blue) [![Twitter: @anduh_](https://img.shields.io/badge/twitter-%40anduh_-blue)](https://twitter.com/anduh_)
+[![VSMarket: rmacro](https://vsmarketplacebadge.apphb.com/version/anduh.rmacro.svg?color=blueviolet&logo=visual-studio-code&style=?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=anduh.rmacro)
+[![installs](https://img.shields.io/vscode-marketplace/d/anduh.rmacro?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=anduh.rmacro)
+
+[![Twitter: @anduh_ ](https://img.shields.io/badge/twitter-%40anduh%5F-blue)](https://twitter.com/anduh_)
 [![Patreon Donate](https://img.shields.io/badge/donate-patreon-orange)](https://www.patreon.com/anduh)
 
 

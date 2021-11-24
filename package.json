@@ -2,7 +2,7 @@
     "name": "rmacro",
     "displayName": "Roll20 Macros",
     "description": "Syntax support for Roll20 macros",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "publisher": "anduh",
     "icon": "images/Roll20.png",
     "repository": {
@@ -10,6 +10,7 @@
         "url": "https://github.com/anduh/rmacro"
     },
     "bugs": {
+        "type": "git",
         "url": "https://github.com/anduh/rmacro/issues"
     },
     "license": "MIT",
