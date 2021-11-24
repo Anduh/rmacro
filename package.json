@@ -55,6 +55,18 @@
                 "path": "./syntaxes/rmacro.tmLanguage.json"
             }
         ],
+		"html": {
+			"customData": [
+				"./html.html-data.json",
+                "./htmlGlobalAttributes.json"
+			]
+		},
+		"pug": {
+			"customData": [
+				"./html.html-data.json",
+                "./htmlGlobalAttributes.json"
+			]
+		},
         "configurationDefaults": {
             "[rmacro]": {
                 "editor.bracketPairColorization.enabled": true

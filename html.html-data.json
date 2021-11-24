@@ -1,0 +1,52 @@
+{
+  "version": 1.1,
+  "tags": [{
+    "name": "rolltemplate",
+    "description": "Roll Template",
+    "references": [
+      {
+        "name": "Roll Templates",
+        "url": "https://wiki.roll20.net/Building_Character_Sheets/Roll_Templates"
+      }
+    ]
+  },
+  {
+    "name": "charmancer",
+    "description": "Charactermancer",
+    "references": [
+      {
+        "name": "Charactermancer",
+        "url": "https://wiki.roll20.net/Charactermancer_Development_Documentation"
+      }
+    ]
+  },
+  {
+    "name": "button",
+    "description": "roll20 buttons",
+    "attributes": [{
+      "name": "type",
+      "description": "roll20 button types",
+      "values": [
+        { "name": "roll" },
+        { "name": "action" }
+      ]
+    }]
+  },
+  {
+    "name": "input",
+    "attributes": [{
+      "name": "type",
+      "description": "roll20 inputs types",
+      "values": [
+        { "name": "hidden" }
+      ]
+    }]
+  },
+  {
+    "name": "span",
+    "attributes": [{
+      "name": "name",
+      "description": "to display attribute, instead of using a disabled input"
+    }]
+  }]
+}
