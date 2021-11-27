@@ -1,5 +1,8 @@
 # Roll20 Macros - `rmacro`
-![!version](https://img.shields.io/badge/Version-1.0.2-blue) [![Twitter: @anduh_](https://img.shields.io/badge/twitter-%40anduh_-blue)](https://twitter.com/anduh_)
+[![VSMarket: rmacro](https://vsmarketplacebadge.apphb.com/version/anduh.rmacro.svg?color=blueviolet&logo=visual-studio-code&style=?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=anduh.rmacro)
+[![installs](https://img.shields.io/vscode-marketplace/d/anduh.rmacro?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=anduh.rmacro)
+
+[![Twitter: @anduh_ ](https://img.shields.io/badge/twitter-%40anduh%5F-blue)](https://twitter.com/anduh_)
 [![Patreon Donate](https://img.shields.io/badge/donate-patreon-orange)](https://www.patreon.com/anduh)
 
 
@@ -27,6 +30,12 @@ Support & Syntax Highlight for [Roll20](https://roll20.net/)'s [macro language](
 
 <img src="https://raw.githubusercontent.com/Anduh/rmacro/main/images/ex1.gif">
 
+**Snippets**
+
+- as you type, some matching suggestions will be provided
+- also includes couple of more advanced examples
+
+<img src="https://raw.githubusercontent.com/Anduh/rmacro/main/images/snippets.gif">
 
 ### Example
 Macro nesting bracket highlight
@@ -40,8 +49,27 @@ Missing bracket stands out
 ### Use
 VScode shows/recognizes "rmacro"-syntax highlight when a file is saved with `.roll` or `.rmacro` suffix.
 
+This extension also works on https://vscode.dev
 
+#### Issues
+
+Sometimes extra spaces are needed to keep the bracket highlight working right.
+
+When nesting double- & single-bracket syntax, leave a `space` after the last inner character.
+
+Good:
+```rmacro
+{{name=@{character_name} }}
+```
+Bad:
+```rmacro
+{{name=@{character_name}}}
+```
 
 ## Other
 
 The extension sets `editor.bracketPairColorization.enabled`: `true` for rmacro files. If this is overruled by user settings, *all* bracket highlights will disappear, not just the extra coloring.
+
+# Related Extensions
+
+"Roll20 Sheet Dev" helps with Character sheet creation.

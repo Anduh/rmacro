@@ -1,0 +1,18 @@
+{
+  "TokenMod (API Command)": {
+      "prefix": "!token-mod",
+      "body": "!token-mod ${1|--set,--on,--config,{{\n$2\n}}|}"
+  },
+  "Roll20 Audio Master (API Command)": {
+    "prefix": "!roll20AM",
+    "body": "!roll20AM --${1|config,audio,edit|}"
+  },
+  "Group Initiative (API Command)": {
+    "prefix": "!group-init group",
+    "body": "!group-init --"
+  },
+  "Group Check (API Command)": {
+    "prefix": "!group-check group",
+    "body": "!group-check${1:-config ${2:--}}"
+  }
+}

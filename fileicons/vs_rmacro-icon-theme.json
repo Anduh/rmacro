@@ -1,0 +1,12 @@
+{
+	"iconDefinitions": {
+		"_rmacro": {
+			"iconPath": "../images/d20-outline.svg"
+		}
+	},
+  "symbol-snippet": "_rmacro",
+	"languageIds": {
+		// icons by language id
+    "rmacro" : "_rmacro"
+	}
+}

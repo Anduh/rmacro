@@ -2,7 +2,7 @@
     "name": "rmacro",
     "displayName": "Roll20 Macros",
     "description": "Syntax support for Roll20 macros",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "publisher": "anduh",
     "icon": "images/Roll20.png",
     "repository": {
@@ -10,6 +10,7 @@
         "url": "https://github.com/anduh/rmacro"
     },
     "bugs": {
+        "type": "git",
         "url": "https://github.com/anduh/rmacro/issues"
     },
     "license": "MIT",
@@ -20,13 +21,14 @@
     "categories": [
         "Programming Languages",
         "Language Packs",
+        "Snippets",
         "Visualization",
         "Other"
     ],
     "keywords": [
         "Roll20",
         "TTRPG",
-        "roll",
+        "RPG",
         "dice",
         "syntax highlight"
     ],
@@ -54,11 +56,40 @@
                 "path": "./syntaxes/rmacro.tmLanguage.json"
             }
         ],
+        "iconThemes": [
+          {
+            "id": "rmacro",
+            "path": "./fileicons/vs_rmacro-icon-theme.json"
+          }
+        ],
+        "snippets": [
+          {
+            "language": "rmacro",
+            "path": "./snippets/math.json"
+          },
+          {
+            "language": "rmacro",
+            "path": "./snippets/common_attr.json"
+          },
+          {
+            "language": "rmacro",
+            "path": "./snippets/examples.json"
+          },
+          {
+            "language": "rmacro",
+            "path": "./snippets/api.json"
+          },
+          {
+            "language": "rmacro",
+            "path": "./snippets/rolltemplate.json"
+          }
+        ],
         "configurationDefaults": {
-            "[rmacro]": {
-                "editor.bracketPairColorization.enabled": true
-            }
-        }
+          "[rmacro]": {
+              "editor.bracketPairColorization.enabled": true,
+              "editor.wordWrap": "on"
+          }
+      }
     },
     "devDependencies": {
         "webpack": "^5.64.2",
