@@ -1,0 +1,14 @@
+{
+  "Default (Rolltemplate)": {
+      "prefix": "&{template:default}",
+      "body": "&{template:default} {{name=$1 }} {{${2:roll}=${3:[[$4]]} }$0"
+  },
+  "5e Desc (Rolltemplate)": {
+    "prefix": "&{template:desc}",
+    "body": "&{template:desc} {{desc=$1 }$0"
+  },
+  "5e Simple (Rolltemplate)": {
+    "prefix": "&{template:simple}",
+    "body": "&{template:simple} {{rname=$1 }} {{mod=$2 }} {{r1=[[$3]] }} {{always=${4:1} }} {{r2=[[$5]] }} {{charname=${6:@{character_name}} ${}$0"
+  }
+}

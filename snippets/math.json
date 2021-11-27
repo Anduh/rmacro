@@ -1,0 +1,18 @@
+{
+  "abs() (Math Function)": {
+      "prefix": "abs() math",
+      "body": "abs($1)$0"
+  },
+  "ceil() (Math Function)": {
+    "prefix": "ceil() math",
+    "body": "ceil($1)$0"
+  },
+  "floor() (Math Function)": {
+    "prefix": "floor() math",
+    "body": "floor($1)$0"
+  },
+  "round() (Math Function)": {
+    "prefix": "round() math",
+    "body": "round($1)$0"
+  }
+}

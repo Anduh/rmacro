@@ -1,0 +1,18 @@
+{
+  "character_name (common attribute)": {
+      "prefix": "char",
+      "body": "character_name"
+  },
+  "character_id (common attribute)": {
+    "prefix": "char",
+    "body": "character_id"
+  },
+  "token_name (common attribute)": {
+    "prefix": "token",
+    "body": "token_name"
+  },
+  "token_id (common attribute)": {
+    "prefix": "token",
+    "body": "token_id"
+  }
+}
