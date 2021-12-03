@@ -8,36 +8,50 @@
 
 Support & Syntax Highlight for [Roll20](https://roll20.net/)'s [macro language](https://wiki.roll20.net/Macro_Guide).
 
+- [Roll20 Macros - `rmacro`](#roll20-macros---rmacro)
+  - [Features](#features)
+    - [Bracket pairing](#bracket-pairing)
+    - [Syntax highlights](#syntax-highlights)
+    - [Snippets](#snippets)
+  - [Example](#example)
+  - [Use](#use)
+    - [Issues](#issues)
+  - [Settings](#settings)
+  - [Contribute](#contribute)
+- [Related Extensions](#related-extensions)
+
 
 ## Features
 
-
-**Bracket pairing**
-
-- roll20 macros (`@{ }`, `?{ }`, `%{ }`, `&{ }`)
+### Bracket pairing
+Automatic bracket pairing for roll20 syntax
+- roll20 macros (`@{ }`, `?{ }`, `%{ }`, `&{ }`, `$[[ ]]`)
 - correctly distinguished `[[ ]]`/`{{ }}` from `[ [ ] ]`/`{ { } }`
 - identifies 1st and 2nd order query nesting & HTML replacement characters
 
 <img src="https://raw.githubusercontent.com/Anduh/rmacro/main/images/bracket-recognition.gif">
 
-**Syntax & keyword highlights**
+### Syntax highlights
 
 - inline roll labels
 - roll, macro & API commands (e.g. `/r`, `!example` `#dex`)
 - normal and fate (`dF`) die
 - some keywords (`selected`, `target`, `%%NEWLINE%%`, `max`, `cf`, `ceil`, `tracker`)
 - special characters used in macros (e.g. `~,|#=+`, and html replacment characters) 
+- **rmacro highlight in other languages**: 
+  - js/pug (everything inside ``roll` ` `` will highlight)
+  - markdown (codeblocks)
 
 <img src="https://raw.githubusercontent.com/Anduh/rmacro/main/images/ex1.gif">
 
-**Snippets**
+### Snippets
 
 - as you type, some matching suggestions will be provided
 - also includes couple of more advanced examples
 
 <img src="https://raw.githubusercontent.com/Anduh/rmacro/main/images/snippets.gif">
 
-### Example
+## Example
 Macro nesting bracket highlight
 
 <img src="https://raw.githubusercontent.com/Anduh/rmacro/main/images/replacement-recognition-bracket.png">
@@ -46,12 +60,20 @@ Macro nesting bracket highlight
 Missing bracket stands out
 <img src="https://raw.githubusercontent.com/Anduh/rmacro/main/images/rmacro-typo.gif">
 
-### Use
+Rmacro syntax highlight in javascript:
+<img src="https://raw.githubusercontent.com/Anduh/rmacro/embedd-md/images/rmacro-in-js.png">
+
+Rmacro syntax highlight in markdown files:
+
+<img src="https://raw.githubusercontent.com/Anduh/rmacro/embedd-md/images/markdown-codeblock.png">
+
+
+## Use
 VScode shows/recognizes "rmacro"-syntax highlight when a file is saved with `.roll` or `.rmacro` suffix.
 
 This extension also works on https://vscode.dev
 
-#### Issues
+### Issues
 
 Sometimes extra spaces are needed to keep the bracket highlight working right.
 
@@ -66,10 +88,32 @@ Bad:
 {{name=@{character_name}}}
 ```
 
-## Other
+## Settings
 
-The extension sets `editor.bracketPairColorization.enabled`: `true` for rmacro files. If this is overruled by user settings, *all* bracket highlights will disappear, not just the extra coloring.
+Sets following default setting for `.rmacro`-files:
+
+* `"editor.bracketPairColorization.enabled": true` - If this is overruled by user settings, *all* bracket highlights will disappear, not just the extra coloring.
+* `"editor.wordWrap": "on"` - wraps lines by default. roll20 macros are often on a single line, and this improves readability.
+
+Installs an extended version of [file-icons](https://marketplace.visualstudio.com/items?itemName=file-icons.file-icons) Theme, which changes the the fileicon for `.rmacro`-files & some roll20 Sheet/API development-related filenames.
+
+## Contribute
+repo: [Anduh/rmacro](https://github.com/Anduh/rmacro)
+
+You can help even without knowing how VS Code extensions work. Here are a few concrete parts to start from: 
+
+* More [rmacro Snippets](https://github.com/Anduh/rmacro/tree/main/snippets): if you look at the existing snippets for `rmacro`, you can follow the same patterns and expand the collection of snippets easily.
+  * About:[VS Code Snippet Syntax](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax)
+* improve [rmacro syntax highlight](https://github.com/Anduh/rmacro/blob/main/syntaxes/rmacro.tmLanguage.json): 
+  * [Regex](https://macromates.com/manual/en/regular_expressions) is used for recognizing things, and creating more of them, [Regexr.com](https://regexr.com/) is a good source.
+    * example: 
+  * [TextMate grammar](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide) is used for defining
+  * About:[VSCode  Syntax Highlight](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide)
+
 
 # Related Extensions
 
-"Roll20 Sheet Dev" helps with Character sheet creation.
+[Roll20 Sheet Dev](https://marketplace.visualstudio.com/items?itemName=anduh.roll20sheetdev) helps with [Character Sheet Development](https://wiki.roll20.net/Building_Character_Sheets).
+
+
+

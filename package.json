@@ -2,7 +2,7 @@
     "name": "rmacro",
     "displayName": "Roll20 Macros",
     "description": "Syntax support for Roll20 macros",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "publisher": "anduh",
     "icon": "images/Roll20.png",
     "repository": {
@@ -51,15 +51,44 @@
         ],
         "grammars": [
             {
-                "language": "rmacro",
-                "scopeName": "source.rmacro",
-                "path": "./syntaxes/rmacro.tmLanguage.json"
+              "language": "rmacro",
+              "scopeName": "source.rmacro",
+              "path": "./syntaxes/rmacro.tmLanguage.json"
+            },
+            { 
+              "scopeName": "markdown.rmacro.codeblock",
+              "path": "./syntaxes/markdown.rmacro.json",
+              "injectTo": [
+                "text.html.markdown",
+                "text.html.basic",
+                "text.html.javascript"
+              ],
+              "embeddedLanguages": {
+                "meta.embedded.block.rmacro": "rmacro"
+              }
+            },
+            {
+              "scopeName": "inline.rmacro",
+              "injectTo": [
+                "source.html",
+                "text.html",
+                "source.js",
+                "source.js.jsx",
+                "source.jsx",
+                "source.ts",
+                "source.tsx",
+                "text.pug"
+              ],
+              "path": "./syntaxes/js.rmacro.json",
+              "embeddedLanguages": {
+                "meta.embedded.block.rmacro": "rmacro"
+              }
             }
         ],
         "iconThemes": [
           {
             "id": "rmacro",
-            "path": "./fileicons/vs_rmacro-icon-theme.json"
+            "path": "./fileicons/file-icons-icon-theme.json"
           }
         ],
         "snippets": [
@@ -89,7 +118,7 @@
               "editor.bracketPairColorization.enabled": true,
               "editor.wordWrap": "on"
           }
-      }
+        }
     },
     "devDependencies": {
         "webpack": "^5.64.2",
