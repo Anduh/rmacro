@@ -2,7 +2,7 @@
     "name": "rmacro",
     "displayName": "Roll20 Macros",
     "description": "Syntax support for Roll20 macros",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "publisher": "anduh",
     "icon": "images/Roll20.png",
     "repository": {
@@ -59,7 +59,7 @@
         "iconThemes": [
           {
             "id": "rmacro",
-            "path": "./fileicons/vs_rmacro-icon-theme.json"
+            "path": "./fileicons/file-icons-icon-theme.json"
           }
         ],
         "snippets": [

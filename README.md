@@ -8,6 +8,15 @@
 
 Support & Syntax Highlight for [Roll20](https://roll20.net/)'s [macro language](https://wiki.roll20.net/Macro_Guide).
 
+- [Roll20 Macros - `rmacro`](#roll20-macros---rmacro)
+  - [Features](#features)
+    - [Example](#example)
+    - [Use](#use)
+      - [Issues](#issues)
+    - [Settings](#settings)
+  - [Contribute](#contribute)
+- [Related Extensions](#related-extensions)
+
 
 ## Features
 
@@ -66,10 +75,32 @@ Bad:
 {{name=@{character_name}}}
 ```
 
-## Other
+### Settings
 
-The extension sets `editor.bracketPairColorization.enabled`: `true` for rmacro files. If this is overruled by user settings, *all* bracket highlights will disappear, not just the extra coloring.
+Sets following default setting for `.rmacro`-files:
+
+* `"editor.bracketPairColorization.enabled": true` - If this is overruled by user settings, *all* bracket highlights will disappear, not just the extra coloring.
+* `"editor.wordWrap": "on"` - wraps lines by default. roll20 macros are often on a single line, and this improves readability.
+
+Installs an extended version of [file-icons](https://marketplace.visualstudio.com/items?itemName=file-icons.file-icons) Theme, which changes the the fileicon for `.rmacro`-files & some roll20 Sheet/API development-related filenames.
+
+## Contribute
+repo: [Anduh/rmacro](https://github.com/Anduh/rmacro)
+
+You can help even without knowing how VS Code extensions work. Here are a few concrete parts 
+
+* More [rmacro Snippets](https://github.com/Anduh/rmacro/tree/main/snippets): if you look at the existing snippets for `rmacro`, you can follow the same patterns and expand the collection of snippets easily. See [VS Code Snippet Syntax](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax)
+* improve [rmacro syntax highlight](https://github.com/Anduh/rmacro/blob/main/syntaxes/rmacro.tmLanguage.json): 
+  * [Regex](https://macromates.com/manual/en/regular_expressions) is used for recognizing things, and creating more of them, [Regexr.com](https://regexr.com/) is a good source.
+    * example: 
+  * [TextMate grammar](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide) is used for defining
+  * About:[VSCode  Syntax Highlight](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide)
+* Make `rmacro` highlight possible in other files:
+  *  
 
 # Related Extensions
 
-"Roll20 Sheet Dev" helps with Character sheet creation.
+[Roll20 Sheet Dev](https://marketplace.visualstudio.com/items?itemName=anduh.roll20sheetdev) helps with [Character Sheet Development](https://wiki.roll20.net/Building_Character_Sheets).
+
+
+

@@ -4,6 +4,7 @@
 
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations": [
-		"anduh.roll20sheetdev"
+		"anduh.roll20sheetdev",
+    "christopherstyles.html-entities"
 	]
 }
