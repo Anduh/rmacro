@@ -2,7 +2,7 @@
 
 ### 1.0.4
 - fixed "File Icon Theme" by extending with [file-icons.file-icons](https://marketplace.visualstudio.com/items?itemName=file-icons.file-icons)
-- Add "Contribute"-section to Readme
+- Readme: Add "Contribute"-section
 
 ### 1.0.3
 - collection of snippets added

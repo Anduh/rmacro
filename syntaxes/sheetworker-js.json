@@ -1,0 +1,29 @@
+{
+  "fileTypes": [
+    "html"
+  ],
+  "scopeName": "sheetworker.js",
+  "injectionSelector": "L:text.html -comment",
+	"patterns": [
+		{
+			"include": "#sheetworker-js"
+		}
+	],
+  "repository": {
+    "sheetworker-js":{
+        "begin": "<script type=\"text/worker\">",
+        "beginCaptures": {
+          "1": {
+            "name": "comment.block"
+          }
+        },
+        "end": "</script>",
+        "contentName": "meta.embedded.block.js",
+        "patterns": [
+          {
+            "include": "source.js"
+          }
+        ]
+    }
+  }
+}

@@ -27351,6 +27351,8 @@
 	"rootFolderExpanded": "_fd_root_open",
 	"fileExtensions": {
     "rmacro" : "_roll20",
+    "rtemplate" : "_roll20",
+    "rolltemplate" : "_roll20",
 		"1": "_manpage_dark-green",
 		"2": "_manpage_dark-green",
 		"3": "_manpage_dark-green",
@@ -33077,9 +33079,6 @@
 		"dropbox": "_dropbox_medium-blue",
 		"node_modules": "_node_medium-green"
 	},
-	"languageIds": {
-    "rmacro" : "_roll20"
-  },
 	"light": {
 		"file": "_file_l",
 		"folder": "_folder_l",

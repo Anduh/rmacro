@@ -47,13 +47,67 @@
                     ".r20macro"
                 ],
                 "configuration": "./language-configuration.json"
+            },
+            {
+              "id": "handlebars",
+              "extensions": [
+                ".rtemplate",
+                ".rolltemplate"
+              ]
+            },
+            {
+              "id": "javascript",
+              "mimetypes": [
+                "text/worker"
+              ]
             }
         ],
         "grammars": [
             {
-                "language": "rmacro",
-                "scopeName": "source.rmacro",
-                "path": "./syntaxes/rmacro.tmLanguage.json"
+              "language": "rmacro",
+              "scopeName": "source.rmacro",
+              "path": "./syntaxes/rmacro.tmLanguage.json"
+            },
+            { 
+              "scopeName": "markdown.rmacro.codeblock",
+              "path": "./syntaxes/markdown.rmacro.json",
+              "injectTo": [
+                "text.html.markdown",
+                "text.html.basic",
+                "text.html.javascript"
+              ],
+              "embeddedLanguages": {
+                "meta.embedded.block.rmacro": "rmacro"
+              }
+            },
+            {
+              "scopeName": "inline.rmacro",
+              "injectTo": [
+                "source.html",
+                "text.html",
+                "source.js",
+                "source.js.jsx",
+                "source.jsx",
+                "source.ts",
+                "source.tsx",
+                "text.pug"
+              ],
+              "path": "./syntaxes/js.rmacro.json",
+              "embeddedLanguages": {
+                "meta.embedded.block.rmacro": "rmacro"
+              }
+            },
+            {
+              "scopeName": "sheetworker.js",
+              "injectTo": [
+                "source.html",
+                "text.html",
+                "text.pug"
+              ],
+              "path": "./syntaxes/sheetworker-js.json",
+              "embeddedLanguages": {
+                "meta.embedded.block.js": "js"
+              }
             }
         ],
         "iconThemes": [
@@ -89,7 +143,7 @@
               "editor.bracketPairColorization.enabled": true,
               "editor.wordWrap": "on"
           }
-      }
+        }
     },
     "devDependencies": {
         "webpack": "^5.64.2",
