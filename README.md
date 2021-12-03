@@ -39,6 +39,7 @@ Automatic bracket pairing for roll20 syntax
 - some keywords (`selected`, `target`, `%%NEWLINE%%`, `max`, `cf`, `ceil`, `tracker`)
 - special characters used in macros (e.g. `~,|#=+`, and html replacment characters) 
 - **rmacro highlight in other languages**: 
+  - js/pug (everything inside ``roll` ` `` will highlight)
   - markdown (codeblocks)
 
 <img src="https://raw.githubusercontent.com/Anduh/rmacro/main/images/ex1.gif">
@@ -59,9 +60,12 @@ Macro nesting bracket highlight
 Missing bracket stands out
 <img src="https://raw.githubusercontent.com/Anduh/rmacro/main/images/rmacro-typo.gif">
 
+Rmacro syntax highlight in javascript:
+<img src="https://raw.githubusercontent.com/Anduh/rmacro/embedd-md/images/rmacro-in-js.png">
+
 Rmacro syntax highlight in markdown files:
 
-<img src="https://raw.githubusercontent.com/Anduh/rmacro/embedded/images/markdown-codeblock.png">
+<img src="https://raw.githubusercontent.com/Anduh/rmacro/embedd-md/images/markdown-codeblock.png">
 
 
 ## Use
@@ -96,16 +100,16 @@ Installs an extended version of [file-icons](https://marketplace.visualstudio.co
 ## Contribute
 repo: [Anduh/rmacro](https://github.com/Anduh/rmacro)
 
-You can help even without knowing how VS Code extensions work. Here are a few concrete parts 
+You can help even without knowing how VS Code extensions work. Here are a few concrete parts to start from: 
 
-* More [rmacro Snippets](https://github.com/Anduh/rmacro/tree/main/snippets): if you look at the existing snippets for `rmacro`, you can follow the same patterns and expand the collection of snippets easily. See [VS Code Snippet Syntax](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax)
+* More [rmacro Snippets](https://github.com/Anduh/rmacro/tree/main/snippets): if you look at the existing snippets for `rmacro`, you can follow the same patterns and expand the collection of snippets easily.
+  * About:[VS Code Snippet Syntax](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax)
 * improve [rmacro syntax highlight](https://github.com/Anduh/rmacro/blob/main/syntaxes/rmacro.tmLanguage.json): 
   * [Regex](https://macromates.com/manual/en/regular_expressions) is used for recognizing things, and creating more of them, [Regexr.com](https://regexr.com/) is a good source.
     * example: 
   * [TextMate grammar](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide) is used for defining
   * About:[VSCode  Syntax Highlight](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide)
-* Make `rmacro` highlight possible in other files:
-  *  
+
 
 # Related Extensions
 

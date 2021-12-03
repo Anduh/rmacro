@@ -2,7 +2,7 @@
     "name": "rmacro",
     "displayName": "Roll20 Macros",
     "description": "Syntax support for Roll20 macros",
-    "version": "1.0.4",
+    "version": "1.1.0",
     "publisher": "anduh",
     "icon": "images/Roll20.png",
     "repository": {
@@ -47,19 +47,6 @@
                     ".r20macro"
                 ],
                 "configuration": "./language-configuration.json"
-            },
-            {
-              "id": "handlebars",
-              "extensions": [
-                ".rtemplate",
-                ".rolltemplate"
-              ]
-            },
-            {
-              "id": "javascript",
-              "mimetypes": [
-                "text/worker"
-              ]
             }
         ],
         "grammars": [
@@ -95,18 +82,6 @@
               "path": "./syntaxes/js.rmacro.json",
               "embeddedLanguages": {
                 "meta.embedded.block.rmacro": "rmacro"
-              }
-            },
-            {
-              "scopeName": "sheetworker.js",
-              "injectTo": [
-                "source.html",
-                "text.html",
-                "text.pug"
-              ],
-              "path": "./syntaxes/sheetworker-js.json",
-              "embeddedLanguages": {
-                "meta.embedded.block.js": "js"
               }
             }
         ],

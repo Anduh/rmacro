@@ -1,7 +1,9 @@
 ## Changelog
 
-### 1.0.4
+### 1.1.0
+- rmacro highlight added to markdown, javascript & pug
 - fixed "File Icon Theme" by extending with [file-icons.file-icons](https://marketplace.visualstudio.com/items?itemName=file-icons.file-icons)
+  - some roll20-associated files also gets higlighted with the logo. (ex. `sheet.json`) 
 - Readme: Add "Contribute"-section
 
 ### 1.0.3
