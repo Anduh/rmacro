@@ -1,6 +1,8 @@
 # Roll20 Macros - `rmacro`
 [![VSMarket: rmacro](https://vsmarketplacebadge.apphb.com/version/anduh.rmacro.svg?color=blueviolet&logo=visual-studio-code&style=?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=anduh.rmacro)
 [![installs](https://img.shields.io/vscode-marketplace/d/anduh.rmacro?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=anduh.rmacro)
+![Last Commit](https://img.shields.io/github/last-commit/Anduh/rmacro)
+![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
 
 [![Twitter: @anduh_ ](https://img.shields.io/badge/twitter-%40anduh%5F-blue)](https://twitter.com/anduh_)
 [![Patreon Donate](https://img.shields.io/badge/donate-patreon-orange)](https://www.patreon.com/anduh)
@@ -27,7 +29,7 @@ Support & Syntax Highlight for [Roll20](https://roll20.net/)'s [macro language](
 Automatic bracket pairing for roll20 syntax
 - roll20 macros (`@{ }`, `?{ }`, `%{ }`, `&{ }`, `$[[ ]]`)
 - correctly distinguished `[[ ]]`/`{{ }}` from `[ [ ] ]`/`{ { } }`
-- identifies 1st and 2nd order query nesting & HTML replacement characters
+- identifies 1st and 2nd order query nesting & [HTML replacement characters](https://wiki.roll20.net/HTML_Entities)
 
 <img src="https://raw.githubusercontent.com/Anduh/rmacro/main/images/bracket-recognition.gif">
 
@@ -37,10 +39,10 @@ Automatic bracket pairing for roll20 syntax
 - roll, macro & API commands (e.g. `/r`, `!example` `#dex`)
 - normal and fate (`dF`) die
 - some keywords (`selected`, `target`, `%%NEWLINE%%`, `max`, `cf`, `ceil`, `tracker`)
-- special characters used in macros (e.g. `~,|#=+`, and html replacment characters) 
+- special characters used in macros (e.g. `~,|#=+`, and [HTML Entities]([HTML replacement characters](https://wiki.roll20.net/HTML_Entities)) 
 - **rmacro highlight in other languages**: 
   - js/pug (everything inside ``roll` ` `` will highlight)
-  - markdown (codeblocks)
+  - markdown (fenced codeblocks, with `rmacro` set as language)
 
 <img src="https://raw.githubusercontent.com/Anduh/rmacro/main/images/ex1.gif">
 
@@ -61,21 +63,31 @@ Missing bracket stands out
 <img src="https://raw.githubusercontent.com/Anduh/rmacro/main/images/rmacro-typo.gif">
 
 Rmacro syntax highlight in javascript:
-<img src="https://raw.githubusercontent.com/Anduh/rmacro/embedd-md/images/rmacro-in-js.png">
+<img src="https://raw.githubusercontent.com/Anduh/rmacro/main/images/rmacro-in-js.png">
 
 Rmacro syntax highlight in markdown files:
 
-<img src="https://raw.githubusercontent.com/Anduh/rmacro/embedd-md/images/markdown-codeblock.png">
+<img src="https://raw.githubusercontent.com/Anduh/rmacro/main/images/markdown-codeblock.png">
 
 
 ## Use
-VScode shows/recognizes "rmacro"-syntax highlight when a file is saved with `.roll` or `.rmacro` suffix.
+VScode shows/recognizes "rmacro"-syntax highlight when:
 
-This extension also works on https://vscode.dev
+- a file has the filetype `.roll` (`.rmacro`/`.roll20`/`.r20macro` also works)
+- inside [fenced codeblocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) of markdown files, with `rmacro` set as the language.
+- inside `.js` and `.pug`-files, when the macro is inside a [tagged template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates) with `rmacro` as the tag 
+
+The autocompletions work only in `.roll`/`.rmacro`/`.roll20`/`.r20macro`-files
+
+This extension also works on [vscode.dev](https://vscode.dev)
+
+You can download the [sample files](https://github.com/Anduh/rmacro/tree/v111/sample-files)) to get started.
+
+<a href="https://github.com/Anduh/rmacro/tree/v111/sample-files/example.roll" target="_blank">Download `example.roll`</a>
 
 ### Issues
 
-Sometimes extra spaces are needed to keep the bracket highlight working right.
+Sometimes extra spaces are needed to keep the bracket highlight working correctly.
 
 When nesting double- & single-bracket syntax, leave a `space` after the last inner character.
 

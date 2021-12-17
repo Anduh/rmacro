@@ -2,7 +2,7 @@
     "name": "rmacro",
     "displayName": "Roll20 Macros",
     "description": "Syntax support for Roll20 macros",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "publisher": "anduh",
     "icon": "images/Roll20.png",
     "repository": {
@@ -46,7 +46,7 @@
                     ".roll20",
                     ".r20macro"
                 ],
-                "configuration": "./language-configuration.json"
+                "configuration": "./syntaxes/language-configuration.json"
             }
         ],
         "grammars": [
