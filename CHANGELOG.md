@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.1.1
+- Readme update
+
 ### 1.1.0
 - rmacro highlight added to markdown, javascript & pug
 - fixed "File Icon Theme" by extending with [file-icons.file-icons](https://marketplace.visualstudio.com/items?itemName=file-icons.file-icons)
