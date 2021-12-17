@@ -1,0 +1,46 @@
+Syntax highlight examples
+
+Basic Rolls:
+
+/r 1d20 + 5
+
+/em got [[1d20+2[dexterity]+2[init class bonus] &{tracker}]] in initiative.
+
+/em hits their targets with [[?{Level cast at|1|2|3|4|5|6|7|8|9}+2]] magic missiles. Total damage is: [[[[1d4+1]]*?{Level cast at}]] Each missile does $[[0]] force damage.
+
+?{Spell|
+   Cure Light Wounds, **Cure Light Wounds** Target Regains [[1d8+5]] HP. | 
+   Cure Moderate Wounds, **Cure Moderate Wounds** Target Regains [[2d8+8]] HP. | 
+   Cure Serious Wounds, **Cure Serious Wounds** Target Regains [[3d8+8]] HP.
+}
+
+
+Roll Templates:
+
+&{template:default} {{name=Chat Menu: @{selected|character_name} }} {{Rolls=[Initiative](~selected|INITIATIVE) }} {{[STR](~selected|STR) @{selected|strength}=  }} {{[DEX](~selected|DEX) @{selected|dexterity}= [Reflex](~selected|REF) }} {{[CON](~selected|CON) @{selected|constitution}= [Fortitude](~selected|FORT) }} {{[INT](~selected|INT) @{selected|intelligence}=  }} {{[WIS](~selected|WIS) @{selected|wisdom}= [Will](~selected|WILL) }} {{[CHA](~selected|CHA) @{selected|charisma}=  }}
+
+&{template:default} [[ [[1d20]] + [[1d6]] + [[6]] ]] {{name=My Attack}} {{$[[0]] + $[[1]] + $[[2]]==$[[3]]}}
+
+/w gm &{template:npcatk} {{attack=1}} {{name=Shadow}} {{rname=Shadow Stealth}} {{rnamec=Hide}} {{r1=[[@{selected|d20}+@{selected|npc_stealth} + 6]]}} {{always=1}} {{r2=[[@{selected|d20}+@{selected|npc_stealth} + 6]]}} {{description=While in dim light or darkness, the shadow can take the Hide action as a bonus action. Its stealth bonus is **also** improved to +6 }}
+
+
+API examples:
+
+!setattr --name John --HP|17|27 --Dex|10
+
+!token-mod {{
+  --flip
+    night_vision
+  --set
+    night_vision_distance|60
+    light_angle|360
+    night_vision_effect|nocturnal
+  --ids @{Wizard|character_id}
+  --current-page
+  --ignore-selected
+}}
+
+
+Macro with a mistake:
+
+&{template:default} {{name=Chat Menu: @{selected|character_name} }} {{Rolls=[Initiative](~selected|INITIATIVE) }} {{[STR](~selected|STR) @{selected|strength}=  }} {{[DEX](~selected|DEX) @{selected|dexterity}= [Reflex](~selected|REF) } {{[CON](~selected|CON) @{selected|constitution}= [Fortitude](~selected|FORT) }} {{[INT](~selected|INT) @{selected|intelligence}=  }} {{[WIS](~selected|WIS) @{selected|wisdom}= [Will](~selected|WILL) }} {{[CHA](~selected|CHA) @{selected|charisma}=  }}
